@@ -1,5 +1,5 @@
 {
-  "name": "envcontract",
+  "name": "@tangyuan1129/envcontract",
   "version": "0.1.0",
   "description": "Find environment-variable drift before your users do.",
   "type": "module",
