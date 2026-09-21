@@ -7,13 +7,13 @@ Your code, `.env.example`, README, Docker file and CI can quietly disagree. `env
 ## Try it
 
 ```bash
-npx envcontract .
+npx @tangyuan1129/envcontract .
 ```
 
 ## CI in one line
 
 ```yaml
-- run: npx envcontract . --strict
+- run: npx @tangyuan1129/envcontract . --strict
 ```
 
 Use `--json` for bots and dashboards. The scanner understands JavaScript/TypeScript, Python, Go, Ruby, PHP, Java, Rust, Swift, shell, Docker/Compose, and `${VARIABLE}` references. It ignores `.git`, dependencies and build output.
