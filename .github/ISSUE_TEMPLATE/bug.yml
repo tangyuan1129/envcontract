@@ -1,0 +1,12 @@
+name: Bug report
+description: Tell us what went wrong
+title: "bug: "
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduce
+      description: Include a tiny repo or command output (never secrets).
+    validations:
+      required: true
+
