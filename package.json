@@ -10,8 +10,8 @@
   "files": ["bin", "src", "README.md", "LICENSE"],
   "keywords": ["dotenv", "env", "environment-variables", "developer-tools", "cli", "ci"],
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/your-handle/envcontract.git" },
-  "bugs": { "url": "https://github.com/your-handle/envcontract/issues" },
-  "homepage": "https://github.com/your-handle/envcontract#readme"
+  "repository": { "type": "git", "url": "https://github.com/tangyuan1129/envcontract.git" },
+  "bugs": { "url": "https://github.com/tangyuan1129/envcontract/issues" },
+  "homepage": "https://github.com/tangyuan1129/envcontract#readme"
 }
 
