@@ -25,7 +25,7 @@ npm publish --access public
 之后任何人都可以运行：
 
 ```bash
-npx envcontract .
+npx @tangyuan1129/envcontract .
 ```
 
 ## 3. 发版本
