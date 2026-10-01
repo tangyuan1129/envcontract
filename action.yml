@@ -1,0 +1,27 @@
+name: 'envcontract'
+description: 'Find environment-variable drift before your users do — checks code, .env.example, README, Dockerfile and CI against each other.'
+author: 'tangyuan1129'
+
+branding:
+  icon: 'check-circle'
+  color: 'blue'
+
+inputs:
+  path:
+    description: 'Directory to scan, relative to the repository root.'
+    required: false
+    default: '.'
+  strict:
+    description: 'Fail the job when drift is found. Set to "false" to report without failing.'
+    required: false
+    default: 'true'
+
+outputs:
+  errors:
+    description: 'Number of error-level findings.'
+  warnings:
+    description: 'Number of warning-level findings.'
+
+runs:
+  using: 'node20'
+  main: 'action/index.js'

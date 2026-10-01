@@ -30,6 +30,17 @@ Run it before every push, and a missing variable on the day of the deploy stops 
 
 Use `--json` for bots and dashboards. The scanner understands JavaScript/TypeScript, Python, Go, Ruby, PHP, Java, Rust, Swift, shell, Docker/Compose, and `${VARIABLE}` references. It ignores `.git`, dependencies and build output.
 
+### As a GitHub Action
+
+```yaml
+- uses: tangyuan1129/envcontract@v1
+  with:
+    path: .
+    strict: true
+```
+
+Findings show up as native annotations on the job, and `errors` / `warnings` are exposed as step outputs. Set `strict: false` to report without failing the build.
+
 ## What it checks
 
 - Variables referenced in code but missing from `.env.example` (and vice versa)
