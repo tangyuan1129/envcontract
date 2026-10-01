@@ -2,6 +2,7 @@
 
 > Find environment-variable drift before your users do.
 
+[![npm](https://img.shields.io/npm/v/envcontract)](https://www.npmjs.com/package/envcontract)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node 18+](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org)
 [![GitHub stars](https://img.shields.io/github/stars/tangyuan1129/envcontract)](https://github.com/tangyuan1129/envcontract/stargazers)
@@ -9,10 +10,14 @@
 
 Your code, `.env.example`, README, Dockerfile and CI can quietly disagree. `envcontract` reads the repository locally and tells you what a fresh clone will miss. It never uploads files and never prints secret values.
 
+- **Zero runtime dependencies.** A tool that runs in CI on every push should not drag its own supply chain along. This one has none.
+- **Local only, always.** No network calls, no account, no telemetry — and it never prints a secret value.
+- **`--strict` fails your build. `--json` feeds your dashboard.**
+
 ## Try it
 
 ```bash
-npx @tangyuan1129/envcontract .
+npx envcontract .
 ```
 
 Run it before every push, and a missing variable on the day of the deploy stops being a surprise.
@@ -20,7 +25,7 @@ Run it before every push, and a missing variable on the day of the deploy stops 
 ## CI in one line
 
 ```yaml
-- run: npx @tangyuan1129/envcontract . --strict
+- run: npx envcontract . --strict
 ```
 
 Use `--json` for bots and dashboards. The scanner understands JavaScript/TypeScript, Python, Go, Ruby, PHP, Java, Rust, Swift, shell, Docker/Compose, and `${VARIABLE}` references. It ignores `.git`, dependencies and build output.
@@ -37,6 +42,8 @@ Anything that would make a fresh clone fail to start, `envcontract` catches loca
 
 Linters usually check source code. Dotenv tools usually check one env file. `envcontract` checks the *contract between them* — the tiny promise that makes a fresh clone start.
 
+It is deliberately small: zero runtime dependencies, no network access, and a codebase you can read in one sitting. Nothing here should be the reason your CI breaks.
+
 ## Development
 
 ```bash
@@ -44,7 +51,7 @@ npm test
 node bin/envcontract.js . --strict
 ```
 
-No runtime dependencies. Node 18+.
+Node 18+.
 
 ## Publish your own copy
 
