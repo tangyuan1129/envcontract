@@ -10,7 +10,7 @@
   "files": ["bin", "src", "README.md", "LICENSE"],
   "keywords": ["dotenv", "env", "environment-variables", "env-vars", "configuration", "config", "developer-tools", "devtools", "cli", "ci", "lint", "static-analysis", "devops", "nodejs"],
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/tangyuan1129/envcontract.git" },
+  "repository": { "type": "git", "url": "git+https://github.com/tangyuan1129/envcontract.git" },
   "bugs": { "url": "https://github.com/tangyuan1129/envcontract/issues" },
   "homepage": "https://github.com/tangyuan1129/envcontract#readme"
 }
